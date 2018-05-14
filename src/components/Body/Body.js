@@ -6,6 +6,7 @@ const styles = {
         justifyContent: 'center',
         paddingLeft: 24,
         paddingRight: 24,
+        paddingBottom: 12,
     },
     content: {
         backgroundColor: '#fff',
