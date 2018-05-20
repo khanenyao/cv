@@ -7,9 +7,6 @@ const getStyles = ({ muiTheme: { fontFamily } }) => ({
     container: {
         display: 'flex',
         justifyContent: 'center',
-        paddingLeft: 24,
-        paddingRight: 24,
-        paddingBottom: 100,
         fontFamily,
     },
     content: {

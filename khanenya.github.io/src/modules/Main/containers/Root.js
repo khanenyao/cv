@@ -27,7 +27,10 @@ const styles = {
         color: '#009688',
     },
     body: {
-        marginTop: 160
+        marginTop: 'calc(102px + 5%)',
+        marginBottom: '5%',
+        paddingLeft: '5%',
+        paddingRight: '5%',
     }
 };
 
