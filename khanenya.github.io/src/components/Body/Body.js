@@ -1,12 +1,16 @@
 import React from 'react';
+import { compose } from 'ramda';
 
-const styles = {
+import withMui from '../../decorators/withMui';
+
+const getStyles = ({ muiTheme: { fontFamily } }) => ({
     container: {
         display: 'flex',
         justifyContent: 'center',
         paddingLeft: 24,
         paddingRight: 24,
-        paddingBottom: 12,
+        paddingBottom: 100,
+        fontFamily,
     },
     content: {
         backgroundColor: '#fff',
@@ -21,16 +25,15 @@ const styles = {
     },
     topLabel: {
         fontSize: 36,
-        fontFamily: 'sans-serif',
     }
-};
+});
 
-const Body = ({ title, children, bottom }) => (
-    <div style={styles.container}>
-        <div style={styles.content}>
+const Body = ({ title, children, bottom, styles, prepareStyles, style }) => (
+    <div style={prepareStyles(Object.assign({}, styles.container, style))}>
+        <div style={prepareStyles(styles.content)}>
             {title && (
-                <div style={styles.topSection}>
-                    <span style={styles.topLabel}>{title}</span>
+                <div style={prepareStyles(styles.topSection)}>
+                    <span style={prepareStyles(styles.topLabel)}>{title}</span>
                 </div>
             )}
             <div>
@@ -45,4 +48,4 @@ const Body = ({ title, children, bottom }) => (
     </div>
 );
 
-export default Body;
+export default compose(withMui({ getStyles }))(Body);

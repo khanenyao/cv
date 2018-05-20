@@ -1,40 +1,44 @@
-import React from  'react';
+import React from 'react';
 
+import {
+    Step,
+    StepButton,
+    StepContent,
+} from 'material-ui/Stepper';
 import Link from './Link';
 
 const styles = {
-    container: {
-        marginTop: 12,
-        marginBottom: 12,
-    },
-    top: {
-        fontSize: 18,
-    },
     school: {
-        fontWeight: 'bold',
+        fontSize: '18px',
     },
     date: {
-        marginRight: 12,
+        color: '#727272',
     },
     work: {
         marginTop: 8,
     }
 };
 
-const Education = ({date, degree, faculty, school, workName, workUrl}) => (
-    <div style={styles.container}>
-        <div style={styles.top}>
-            <span style={styles.date}>{date}</span>
+const Education = ({ date, degree, faculty, school, workName, workUrl, onClick, ...rest }) => (
+    <Step {...rest}>
+        <StepButton onClick={onClick} icon={null}>
             <span style={styles.school}>{school}</span>
-        </div>
-        <div>{faculty}</div>
-        <div>{degree}</div>
-        {workName && (
-            <div style={styles.work}>
-                <div>Work: <Link href={workUrl}>{workName}</Link></div>
-            </div>
-        )}
-    </div>
+        </StepButton>
+        <StepContent>
+            <span style={styles.date}>{date}</span>
+            <p>
+                {faculty}
+                <br />
+                {degree}
+            </p>
+            {workName && (
+                <div style={styles.work}>
+                    <div>Thesis: <Link href={workUrl}>{workName}</Link></div>
+                </div>
+            )}
+        </StepContent>
+    </Step>
 );
+Education.displayName = 'Step';
 
 export default Education;
