@@ -44,6 +44,8 @@ const Root = (_, context) => (
                         degree={'Bachelor of Information Technology'}
                         workName={'Design and implementation of an application for localization of rolling stock using Raspberry Pi and a web service.'}
                         workUrl={'https://dk.upce.cz/handle/10195/68089'}
+                        mediaName={'Presentation'}
+                        mediaUrl={'https://drive.google.com/open?id=1oHe_5vwDGZa8foiLa1ZOB8aIPMWPkQ8N'}
                     />
                     <Education
                         date={'2012 - 2013'}

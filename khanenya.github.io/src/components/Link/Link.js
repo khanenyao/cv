@@ -34,11 +34,11 @@ class Link extends Component {
     }
 
     render() {
-        const { children, href, newTab = true } = this.props;
+        const { children, href, newTab = true, style } = this.props;
         const { isActive } = this.state;
         return (
             <span
-                style={href && (isActive ? styles.activeLink : styles.nonActive)}
+                style={href && (Object.assign({}, isActive ? styles.activeLink : styles.nonActive, style))}
                 onClick={() => navigate(href, newTab)}
                 onMouseEnter={this.handleChangeLinkState}
                 onMouseLeave={this.handleChangeLinkState}

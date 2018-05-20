@@ -26,13 +26,13 @@ const getStyles = ({ muiTheme: { fontFamily } }) => ({
     },
     moreVertIcon: {
         color: '#fff',
+        cursor: 'pointer',
     },
     profile: {
         backgroundColor: '#009688',
         color: '#fff',
         height: 'max-content',
         display: 'flex',
-        marginBottom: 100,
         position: 'fixed',
         top: 40,
         width: '100%',
@@ -62,7 +62,11 @@ const Header = ({ styles }) => (
     <div style={styles.container}>
         <AppBar
             showMenuIconButton={false}
-            iconElementRight={<GetApp color={styles.moreVertIcon.color} />}
+            iconElementRight={<GetApp color={styles.moreVertIcon.color} style={styles.moreVertIcon} />}
+            onRightIconButtonClick={() => {
+                const win = window.open('https://drive.google.com/open?id=1txOAN3OgW-tQLO-8DQ2WocrLg3EMHKqb', '_blank');
+                win.focus();
+            }}
             style={styles.appBar}
             titleStyle={styles.titleStyle}
         />
