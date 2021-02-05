@@ -59,8 +59,13 @@ const Root = (_, context) => (
                 </StepController>
             </Section>
             <Section label={'Experience'} icon={<Work style={styles.iconE} />}>
+            <Experience
+                    date={'2019 - CURRENT'}
+                    company={{ name: 'eMan', url: 'https://emanglobal.com/' }}
+                    position={'JavaScript developer'}
+                />
                 <Experience
-                    date={'2015 - CURRENT'}
+                    date={'2015 - 2019'}
                     company={{ name: 'CGI CS&EE', url: 'https://www.cgi.com/en/ceska-republika' }}
                     position={'Analyst Programmer'}
                 />
@@ -69,8 +74,13 @@ const Root = (_, context) => (
                 <Projects
                     projects={[
                         {
+                            fromYear: '2019',
+                            toYear: 'CURRENT',
+                            description: 'He mainly does software development using web technologies (React). Part of apps are implemented for use on mobile devices (PWA), desktops (PWA), televisions (Tizen) or as extensions for other products (Microsoft Office apps). He got a lot of experience with TypeScript language, MobX state management library and fundamental skills of designing applications using MVVM patterns.',
+                        },
+                        {
                             fromYear: '2017',
-                            toYear: 'current',
+                            toYear: '2019',
                             description: 'For more than a year I have been working on a financial project as a JavaScript developer. Our team is developing a web application which is based on React and managed on Liferay CMS. On this project I have got a lot of new knowledge from my colleagues and ability to work in a big team located across differents cities.',
                         },
                         {
@@ -95,15 +105,15 @@ const Root = (_, context) => (
                 <Skills>
                     <SkillCategory
                         categoryName={'Actively using'}
-                        skills={["React", "Redux", "Material-UI", "Yarn / npm", "JavaScript", "Java", "SQL", "HTML", "CSS", "UML", "JSON", "REST"]}
+                        skills={["JavaScript","TypeScript", "React", "MobX", "Yarn / npm",  "SQL", "HTML", "CSS", "REST"]}
                     />
                     <SkillCategory
                         categoryName={'Good grasp'}
-                        skills={["Swift", "C", "C++", "C#", "JavaFX", "Ramda js"]}
+                        skills={["Java", "Swift", "C", "C++", "C#", "JavaFX", "Ramda js", "Redux",]}
                     />
                     <SkillCategory
                         categoryName={'Some experience'}
-                        skills={["Liferay", "Vaadin", "React Native", "Electron", "iOS App Development", "Android App Development", "Spring Boot"]}
+                        skills={["node.js", "Liferay", "Vaadin", "React Native", "Electron", "iOS App Development", "Android App Development", "Spring Boot"]}
                     />
                     <SkillCategory
                         categoryName={'Operating systems'}

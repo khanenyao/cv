@@ -64,7 +64,7 @@ const Header = ({ styles }) => (
             showMenuIconButton={false}
             iconElementRight={<GetApp color={styles.moreVertIcon.color} style={styles.moreVertIcon} />}
             onRightIconButtonClick={() => {
-                const win = window.open('https://drive.google.com/open?id=1txOAN3OgW-tQLO-8DQ2WocrLg3EMHKqb', '_blank');
+                const win = window.open('https://drive.google.com/file/d/1f4zR6Nos_hx3IYFm3CGMHer1KBuEf2II/view?usp=sharing', '_blank');
                 win.focus();
             }}
             style={styles.appBar}
@@ -74,7 +74,7 @@ const Header = ({ styles }) => (
             <Avatar src={require('../../images/profile.jpg')} size={styles.avatarSize} style={styles.avatar} />
             <div style={styles.nameContainer}>
                 <span style={styles.name}>Orest Khanenya</span>
-                <div style={styles.desription}>23 years old developer.</div>
+                <div style={styles.desription}>26 years old developer.</div>
             </div>
         </div>
     </div>
